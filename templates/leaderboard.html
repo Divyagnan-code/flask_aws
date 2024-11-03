@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Best Score</th>
+        </tr>
+        {% for score in scores %}
+        <tr>
+            <td>{{ score.user }}</td>
+            <td>{{ score.best_score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('game') }}">Back to Game</a>
+</body>
+</html>
